@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>
+      my first flast project
+    </title>
+  </head>
+  <body>
+    <style>
+      .b1{
+        background-color:blue;
+        cursor:pointer;
+      }
+      h1{
+        text-align:center;
+      }
+      h2{
+        text-align:center;
+      }
+      .p1{
+        text-align:center;
+      }
+      .i1{
+        align-self:center;
+        object-fit:cover;
+      }
+      
+      .container{
+        text-align:center;
+      }
+      .css{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        
+      }
+      .b{
+        margin-left:100px;
+        cursor:pointer;
+      }
+      .p2{
+          margin: 0;
+          display:inline-block;
+      }
+    </style>
+        <div class ="container">
+        <h1>VSQUARE</h1>
+        <img src ="https://hello-4--niharikavv1.repl.co/static/download.jpg" class = "i1">
+        <h2>About VSQUARE</h2>
+        <p class ="p1">Hello peeps, we are here to show to job openings in different sectors . Intrested candidates can apply</p>
+        <h2>Job Openings</h2>
+        <p>
+          {%for job in jobs%}
+          <div class="css">
+            <div class="">
+            <p class="p1">{{job['title']}}</p>
+            <p class ="p2">{{job['location']}}</p>
+            </div>
+            <button class="b">Apply</button>
+            
+          </div>
+          <p>--------------------------------------------</p>
+          {%endfor%}
+        </p>
+        </div>
+        <div style="text-align:center;">
+        <button class = "b1">Contact</button>
+        <p>Copyright 2022 , jovian</p>
+        </div>
+  </body>
+</html>
